@@ -21,6 +21,7 @@ const parseTitle = title => {
   document.write(wrapped);
 };
 
+
 document.write(`<ol>`);
 movies.forEach(movie => parseTitle(movie));
 document.write(`</ol>`);

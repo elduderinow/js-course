@@ -16,11 +16,11 @@ const tvshows = [
   `the oa`,
 ];
 
+let reverse = tvshows.reverse();
 document.write(`<ol>`);
 for (let i = 0; i < tvshows.length; i++) {
 
-  document.write(`<li>${tvshows[i]}</li>`);
-
+  document.write(`<li>${reverse[i]}</li>`);
 }
 document.write(`</ol>`);
 
