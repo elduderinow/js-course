@@ -26,7 +26,7 @@ const createList = movies => {
   return `
     <ol>${movies
       .map(movie => parseTitle(movie))
-      .map(movie => wrapWithTag(movie, `li`))
+      .map(movie => wrapWithTag(movie, `li`)
       .join(``)}
     </ol>`;
 };

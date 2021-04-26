@@ -16,7 +16,8 @@ const tvshows = [
   `the oa`,
 ];
 
-let reverse = tvshows.reverse();
+let reverse = tvshows.concat().reverse();
+
 document.write(`<ol>`);
 for (let i = 0; i < tvshows.length; i++) {
 

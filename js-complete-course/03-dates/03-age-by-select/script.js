@@ -10,7 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
+    let button = document.getElementById("run");
+    button.addEventListener("click", DisplayInfo);
 
-    // your code here
+
+
+    function DisplayInfo() {
+        let day = document.getElementById("dob-day").value;
+        let month = document.getElementById("dob-month").value;
+        let year = document.getElementById("dob-year").value;
+
+        alert(`you were born on day ${day}, in the month ${month} in ${year}`);
+    }
+
+
+
+
 
 })();

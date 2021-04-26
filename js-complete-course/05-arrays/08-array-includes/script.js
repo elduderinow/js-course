@@ -26,6 +26,10 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        let find = fruits.some(item => item === "apple");
+        console.log(find);
+    });
 
 })();

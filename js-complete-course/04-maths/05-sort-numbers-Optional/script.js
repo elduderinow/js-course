@@ -15,7 +15,20 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let val = document.getElementById("numbers").value;
+        let split = val.split(',');
+
+        split.map(function(num)  {
+           parseInt(num);
+        });
+
+        split.sort((a,b) => a-b );
+
+        document.getElementById("numbers").value=split;
+
+
+
+
 
     });
 

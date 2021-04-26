@@ -10,12 +10,16 @@
 // You will have time to focus on it later.
 
 (function() {
-    
-    // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let val = document.getElementById("number").value;
+
+        function factorial(num) {
+            return (num != 1) ? n * factorial(n - 1) : 1;
+        }
+
+        alert( factorial(val) ); // 120
 
     });
 

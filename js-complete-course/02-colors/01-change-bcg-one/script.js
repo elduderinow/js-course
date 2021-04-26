@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+
+    for (let number = 0; number < 4; number++) {
+
+        let button = document.getElementsByTagName("button")[number];
+        button.addEventListener("click", ChangeColor);
+
+        function ChangeColor() {
+            let colorInput = button.id;
+            document.body.style.backgroundColor = colorInput;
+        }
+
+    }
+
 
 })();

@@ -10,9 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
+    let date = new Date();
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let daynum = date.getDay();
+    let year = date.getFullYear();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
 
-    // your code here
+    let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    let day = days[ date.getDay() ];
+    let month = months[ date.getMonth() ];
+
+
+    document.getElementById("target").innerHTML= `${day} ${daynum} ${month} ${year}, ${hour}h${min}m${sec}s `;
+
 
 })();

@@ -8,15 +8,20 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-let questions = [{
-    question: 'Are you happy?',
-    answer: 'yes',
-    affirm: 'Yay! You got it right!',
-    rebuttal: 'Nope, you are definitely happy.'
-}
 
-(function() {
 
-    // your code here
+(function loop() {
+
+
+    let age = prompt("What is your age");
+    let gender = prompt("What is your Gender");
+    let town = prompt("And where do you live");
+
+    let salto = confirm(`your age is ${age} Your gender is ${gender} & you live in ${town}`);
+
+    if (salto === false) {
+        loop();
+    }
+
 
 })();

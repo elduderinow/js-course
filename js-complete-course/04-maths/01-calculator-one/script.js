@@ -9,22 +9,36 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
     // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("addition").addEventListener("click", function() {
-        // perform an addition
+
+    document.getElementById("addition").addEventListener("click", function () {
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+
+        alert(opOne + opTwo);
     });
 
-    document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
+
+    document.getElementById("substraction").addEventListener("click", function () {
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+
+        alert(opOne - opTwo);
     });
 
-    document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
+    document.getElementById("multiplication").addEventListener("click", function () {
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+
+        alert(opOne * opTwo);
     });
 
-    document.getElementById("division").addEventListener("click", function() {
-        // perform an division
+    document.getElementById("division").addEventListener("click", function () {
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+
+        alert(opOne / opTwo);
     });
 })();

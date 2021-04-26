@@ -28,5 +28,14 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+       const sets = new Set(fruits);
+       let newArr = Array.from(sets);
+
+       console.log(newArr);
+       alert(newArr);
+
+    });
+
 })();
