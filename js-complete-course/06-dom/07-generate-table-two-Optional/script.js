@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     let target = document.getElementById("target")
     let table = document.createElement('table')
@@ -18,9 +18,26 @@
 
     for (let i = 0; i < 10; i++) {
         let tr = document.createElement('tr')
-        let td = document.createElement('td')
-        table.appendChild(tr).appendChild(td);
+        for (let i = 0; i < 10; i++) {
+            let td = document.createElement('td')
+            table.appendChild(tr).appendChild(td);
+        }
     }
     target.appendChild(table);
+
+    document.querySelectorAll("tr").forEach((elem)=>{
+
+      for (let i = 0; i < 10; i++) {
+          for (let k = 0; k < 11; k++) {
+
+              elem.children[i].innerHTML= i;
+          }
+
+      }
+
+
+
+    });
+
 
 })();

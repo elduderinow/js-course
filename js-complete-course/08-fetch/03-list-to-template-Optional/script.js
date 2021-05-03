@@ -10,5 +10,34 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let heroArr = [];
+    let heroN = document.getElementsByClassName("name");
+    let heroAE = document.getElementsByClassName("alter-ego");
+    const target = document.getElementById("target");
+    const button = document.getElementById("run");
+
+    let temp = document.getElementsByTagName("template")[0];
+
+
+    button.addEventListener("click", function () {
+
+        for (let i = 0; i < heroArr.length; i++) {
+            let clon = temp.content.cloneNode(true);
+            target.appendChild(clon);
+            heroN[i].innerHTML = heroArr[i].name;
+            heroAE[i].innerHTML = heroArr[i].alterEgo;
+        }
+    });
+
+    getGithubData();
+
+    async function getGithubData() {
+        let data = await fetch('../../_shared/api.json');
+        let main = await data.json();
+
+        main.heroes.forEach((elem) => {
+            heroArr.push(elem);
+        })
+    }
+
 })();

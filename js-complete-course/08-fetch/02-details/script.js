@@ -39,5 +39,5 @@
             heroArr.push(elem);
         })
     }
-    
+
 })();

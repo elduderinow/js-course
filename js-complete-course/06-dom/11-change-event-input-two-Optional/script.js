@@ -10,14 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
-
+    let validity = document.getElementById("validity");
     let inputField = document.getElementById("pass-one");
     inputField.addEventListener("input", function (){
-        let string =  this.value.length;
-        console.log(string);
-        if (string >= 10) {
-            console.log("stop here!");
-            this.setAttribute("maxlength","10");
+        password = this.value.replace(/[^0-9]/g,"").length;
+        let lengt =  this.value.length;
+        if (lengt >= 8 && password >= 2) {
+            validity.innerHTML="Ok";
+        } else {
+            validity.innerHTML="Not Ok";
         }
     });
 

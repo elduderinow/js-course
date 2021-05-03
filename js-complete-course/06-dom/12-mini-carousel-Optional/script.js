@@ -11,14 +11,23 @@
 
 (function() {
 
-    var gallery= [
+    let gallery= [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
+        "https://bit.ly/3xHig6r",
     ];
+    let image = document.querySelectorAll("figure img");
+    let button = document.getElementById("next");
 
-    // your code here
+
+    button.addEventListener("click", function (){
+        let source = gallery.pop();
+        image[0].setAttribute("src",source);
+    });
+
+
 
 })();
