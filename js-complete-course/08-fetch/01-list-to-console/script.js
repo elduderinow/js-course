@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    async function getGithubData() {
+        let data =  await fetch('../../_shared/api.json');
+        let main = await data.json();
+        console.log(main);
+    }
+    getGithubData();
 })();
+

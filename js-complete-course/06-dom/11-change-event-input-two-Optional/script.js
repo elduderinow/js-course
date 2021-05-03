@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    let inputField = document.getElementById("pass-one");
+    inputField.addEventListener("input", function (){
+        let string =  this.value.length;
+        console.log(string);
+        if (string >= 10) {
+            console.log("stop here!");
+            this.setAttribute("maxlength","10");
+        }
+    });
 
 })();

@@ -9,8 +9,27 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    let button = document.getElementById("run");
+    let passOne = document.getElementById("pass-one");
+    let passTwo = document.getElementById("pass-two");
+    let field = document.querySelectorAll("input");
 
-    // your code here
+
+    button.addEventListener("click", function () {
+        let p1 = passOne.value;
+        let p2 = passTwo.value;
+
+        if (p1 != p2) {
+            field.forEach((elem)=>{
+                elem.style.borderColor="red";
+            });
+            console.log("its not the same");
+        } else {
+            console.log("its the same");
+        }
+
+    })
+
 
 })();

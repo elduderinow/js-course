@@ -11,6 +11,5 @@
 
 (function() {
 
-    // your code here
-
+   let select =  document.querySelector("#target").innerHTML="Pwned";
 })();

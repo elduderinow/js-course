@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
-
+document.querySelectorAll("p.target").forEach((elem)=>{
+    elem.innerHTML="Pwned";
+});
 })();

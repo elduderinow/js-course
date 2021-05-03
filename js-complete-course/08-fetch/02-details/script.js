@@ -10,5 +10,34 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let heroArr = [];
+    let heroN = document.getElementsByClassName("name");
+    const target = document.getElementById("target");
+    const input = document.getElementById("hero-id");
+    const button = document.getElementById("run");
+
+    let temp = document.getElementsByTagName("template")[0];
+    let clon = temp.content.cloneNode(true);
+
+    button.addEventListener("click", function () {
+        let inVal = parseInt(input.value);
+        let hero = heroArr[inVal - 1];
+        let heroName = hero.name;
+        target.appendChild(clon);
+        heroN[0].innerHTML = heroName;
+
+
+    });
+
+    getGithubData();
+
+    async function getGithubData() {
+        let data = await fetch('../../_shared/api.json');
+        let main = await data.json();
+
+        main.heroes.forEach((elem) => {
+            heroArr.push(elem);
+        })
+    }
+    
 })();

@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+    let inputField = document.getElementById("pass-one");
 
-    // your code here
+    inputField.addEventListener("input", function () {
+        let string = this.value.length;
+        console.log(string);
+        if (string >= 10) {
+            console.log("stop here!");
+            this.setAttribute("maxlength", "10");
+        }
+    });
 
 })();

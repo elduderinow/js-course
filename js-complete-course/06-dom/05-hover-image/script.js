@@ -10,7 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
+    let imgChange = document.querySelectorAll("figure img")[0];
+    let imgSrc = imgChange.getAttribute("data-hover");
+    let imgOg = imgChange.getAttribute("src");
 
-    // your code here
+
+
+
+    imgChange.addEventListener("mouseover", function (){
+        imgChange.setAttribute("src",imgSrc);
+    });
+
+    imgChange.addEventListener("mouseout", function (){
+        imgChange.setAttribute("src",imgOg);
+    });
 
 })();
