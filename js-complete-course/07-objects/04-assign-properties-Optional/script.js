@@ -26,5 +26,31 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+    //loop through each element in the computer object. If there are multiple objects, they get put in an array (I think).
+    //had no trouble with this exercise.
+    computers.forEach((elem)=>{
+
+        //simple if else statement, used undefined so I don't overwrite anything that's already there.
+        if (elem.available === undefined) {
+            elem.available = defaultProps.available;
+        } if (elem.os === undefined) {
+            elem.os = defaultProps.os;
+        } if (elem.user === undefined) {
+            elem.user = defaultProps.user;
+        }
+    });
+
+    //log it here.
+    document.getElementById("run").addEventListener('click', function (){
+        computers.forEach((elem)=>{
+            console.log(elem);
+            console.log(elem.id);
+            console.log(elem.available);
+            console.log(elem.user);
+            console.log(elem.os);
+        });
+    })
+
+
 })();

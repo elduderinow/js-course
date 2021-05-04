@@ -25,16 +25,12 @@
         let heroName = hero.name;
         target.appendChild(clon);
         heroN[0].innerHTML = heroName;
-
-
     });
 
     getGithubData();
-
     async function getGithubData() {
         let data = await fetch('../../_shared/api.json');
         let main = await data.json();
-
         main.heroes.forEach((elem) => {
             heroArr.push(elem);
         })

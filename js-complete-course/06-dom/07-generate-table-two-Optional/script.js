@@ -10,7 +10,8 @@
 // You will have time to focus on it later.
 
 (function () {
-
+    //een simpele functie voor het creeren van een tabel. eerst de 10x de rows genereren, daarna een for loop in de for loop vor het creeeren van de rijen.
+    // table border, omdat het anders ontzichtbaar is, ik vermoed dat er ergens in de PHP een standaard dikte en kleur wordt meegegeven.
     let target = document.getElementById("target")
     let table = document.createElement('table')
 
@@ -23,19 +24,23 @@
             table.appendChild(tr).appendChild(td);
         }
     }
+    // hier pas appenden aan de table, aangezien er maar 1 table is en deze NIET in de for loop moet staan.
     target.appendChild(table);
 
-    document.querySelectorAll("tr").forEach((elem)=>{
+/*func voor rasters te vullen met multiplication tabel.
+Door de kolommen te linken aan een de variabel "elem" en index aan rows bekom je een matrix waar je coordinaten op kan pinnen.
+En dan is het gewoon appel met peren vermenigvuldigen. Het zijn twee aparte 'rasters' maar wel beide integers dus met een simpele berekning is het snel ingevuld.
 
-      for (let i = 0; i < 10; i++) {
-          for (let k = 0; k < 11; k++) {
+- De for each op de tr, gaat elke TD af en hangt daar een index aan. dus 10*10 = 100.
+- De for loop achteraf itereert door de kolommen en hangt daar een waarde aan vast van 1-10.
+- daarna verander je de innerHTML dmv door de index van de element te ittereren.
+ */
+    document.querySelectorAll("tr").forEach((elem, index) => {
+        for (let k = 0; k < 10; k++) {
+            elem.children[k].innerHTML = `${k + 1} i = ${index+1}`;
+            elem.children[k].innerHTML = (k+1)*(index+1);
 
-              elem.children[i].innerHTML= i;
-          }
-
-      }
-
-
+        }
 
     });
 
